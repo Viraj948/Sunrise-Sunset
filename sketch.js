@@ -7,7 +7,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var backgroundImg;
 
-var bg ;
+var bg="sunrise1.png" ;
 
 function preload() {
      getBackgroundImg();
@@ -24,10 +24,9 @@ function setup(){
 function draw(){
 
     // add condition to check if any background image is there to add
-if(backgroundImg){
-    backgroundImg.add(backgroundImg);
+if (backgroundImg){
+background(backgroundImg)
 }
-
     Engine.update(engine);
 
     // write code to display time in correct format here
@@ -88,7 +87,7 @@ var response=await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
     }
     
     backgroundImg=loadImage(bg)
-    
+    console.log(backgroundImg)
 }
     
 
